@@ -1,0 +1,661 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing:border-box;
+}
+
+/*---Background---*/
+
+.top{
+    min-height: 100vh;
+  width:100%;
+    background-image: url(images/background.jfif);
+  background-position: right bottom;
+  background-repeat: repeat;
+  background-size: cover;
+  position: relative;
+  overflow: auto;
+  
+}
+
+#author{
+    margin-top: 30px;
+    margin-right: 50px;
+    width: 20%;
+    height: auto;
+    transform: rotate(10deg);
+    border-style: dotted;
+    border-color: burlywood;
+
+}
+ 
+
+  @media screen and (max-width: 600px) {
+    #author{
+      float:none;
+      width:50%;
+      transform:translate(110px);
+    }
+  }
+  
+
+.top h2{
+    width: 90%;
+    color:burlywood;
+    text-align: center;
+    font-size: 5em;
+    transform:translate(-10px, 80px);
+    
+    
+}
+
+.top p{
+    align-items: center;
+    color:burlywood;
+    font-size: 20px;
+    transform:translate(80px, 80px);
+    
+    
+}
+
+.top hr{
+    text-align: center;
+    color:burlywood;
+    font-size: 20px;
+    transform:translate(80px, 80px);
+    width: 60%;
+    
+}
+  
+  @media screen and (max-width: 600px) {
+    div.top h2{
+      font-size: 35px;
+      font-weight: 500;
+      word-wrap:break-word;
+      transform:translate(10px, 10px);
+    }
+
+    div.top p{
+        font-size: 20px;
+        transform: translate(10px, 30px);
+        font-weight:400;
+        text-align:center;
+      }
+
+      div.top hr{
+        font-size: 20px;
+        transform: translate(80px, 15px);
+        
+      }
+  }
+  
+  
+
+  /*---Menu---*/
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation{
+    flex:1;
+    text-align: right;
+}
+
+.navigation li{
+    list-style:none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.navigation li a{
+    color:#edc531;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.logo{
+    color:#573b3b;
+    font-size: 50px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.logo span{
+    color: burlywood;
+
+}
+
+.navigation li::after{
+content:"";
+width:0%;
+height:2px;
+background:peru;
+display:block;
+margin:auto;
+transition:0.5s;
+}
+
+.navigation li:hover::after{
+    width:100%;
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color:burlywood;
+    border: 1px solid burlywood;
+    padding: 12px 34px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transform:translate(380px, 100px);
+}
+
+.btn:hover{
+    border:1px solid #606c38;
+    background: #606c38;
+    transition: 1s;
+}
+
+
+@media screen and (max-width: 600px) {
+    .btn{
+      font-size: 20px;
+      transform: translate(130px, 45px);
+    }
+    header .navigation{
+        display:none;
+    }
+
+    header .navigation.active{
+        width:100%;
+        height:calc(100% - 68px);
+        position:fixed;
+        top:95px;
+        left:0;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        flex-direction: column;
+        background:#606c38;
+        z-index: 2;
+    }
+    .menuToggle{
+        position:relative;
+        width: 40px;
+        height:40px;
+        background: url(Images/menu.png);
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor:pointer;
+    }
+    .menuToggle.active{
+        background: url(Images/cross.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+
+
+
+      /*---Book---*/
+
+      .book{
+          padding-top: 80px;
+          width:100%;
+          margin:none;
+          text-align:center;
+          background-image: url(images/homebg.jfif);
+          background-position: right bottom;
+          background-repeat: repeat;
+          background-size: cover;
+          position: relative;
+          overflow: auto;
+          clear:none;
+          
+      }
+
+      .book h1{
+          font-size: 36px;
+          font-weight: 400;
+          color: #573b3b;
+      }
+
+      .book hr{
+          width:40%;
+          border-color:black;
+          margin:auto;
+      }
+      
+      .book img{
+          width: 30%;
+          height: auto;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          padding:50px;
+      }
+     
+      .book p{
+          float:left;
+          font-weight:400;
+          font-size: 20px;
+          text-align: center;
+          padding: 10px;
+          margin: 5px;
+          border-color: darkolivegreen;
+          border: dashed green;
+      }
+
+      @media screen and (max-width: 600px){
+          .book img{
+            float:none;
+            width:70%;
+            transform:translate(10px);
+          }
+
+      }
+
+
+      
+      .iframe-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding-top: 56.25%;
+      }
+
+      .iframe-container iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .ytvid{
+        color: #573b3b;
+          padding-top: 80px;
+          padding-bottom: 80px;
+       text-align: center;
+       word-wrap:break-word;
+       font-weight: 500;
+       background-image:url(Images/homebg.jfif);
+      }
+     
+      /*---praise---*/
+
+      .praise{
+          width:80%;
+          margin: auto;
+          text-align: center;
+          padding-top: 80px;
+      }
+      .praise h1{
+          font-size: 36px;
+          font-weight: 600;
+      }
+      .row{
+          margin-top: 5%;
+          display: flex;
+          justify-content: space-between;
+      }
+      .prize-col{
+          flex-basis:31%;
+          background: #e2dac3;
+          border-radius: 10px;
+          margin-bottom: 5%;
+          padding: 20px 12px;
+          box-sizing: border-box;
+          transition: 0.5s;
+      }
+      .prize-col h3{
+          text-align: center;
+          font-weight: 600;
+          margin: 10px 0;
+      }
+      .prize-col:hover{
+          box-shadow:0 0 20px 0px rgba(0,0,0,0.2) ;
+      }
+
+      @media screen and (max-width: 600px){
+        .row{
+            flex-direction: column;
+        }
+    }
+
+      /*---Footer---*/
+
+      .footer{
+          width: 100%;
+          text-align:center;
+          padding: 30px 0;
+          
+      }
+
+      .footer h4{
+          margin-bottom: 25px;
+          margin-top: 20px;
+          font-weight: 300;
+      }
+
+      .footer p{
+          font-weight:400;
+      }
+
+      .icons .fa{
+          color:#606c38;
+          margin: 0 13px;
+          cursor: pointer;
+          padding: 18px 0;
+      }
+
+
+      .about{
+          height: 50vh;
+          width: 100%;
+          background-image: url(Images/aboutauthor.jfif);
+          background-position: center;
+          background-size: cover;
+          text-align: center;
+          color: burlywood;
+          
+         
+      }
+
+    .about h1{
+        font-size: 3em;
+        transform:translate(-15px, 80px);
+    }
+
+    .about-author{
+        width:80%;
+        margin:auto;
+        padding-top:80px;
+        padding-bottom:50px;
+    }
+
+    .about-col{
+        flex-basis: 48%;
+        padding: 30px 30px;
+        border: 1px outset #606c38;
+    }
+
+    .about-col img{
+        width:100%;
+        
+    }
+    .about-col h1{
+        padding-top: 0;
+        color:#606c38;
+        font-size: 36px;
+    }
+
+    .about-col p{
+        padding: 15px 0 25px;
+    }
+
+    #about-btn{
+        transform: translate(35px, 10px);
+    }
+
+    #pic-border{
+        border: hidden;
+    }
+
+     /*---Contact us---*/
+
+     .location{
+         width:80%;
+         margin:auto;
+         padding:80px 0;
+     }
+     .location iframe{
+         width:100%;
+     }
+
+     .contact-us{
+         width:80%;
+         margin:auto;
+     }
+
+     .contact-col{
+         flex-basis:48%;
+         margin-bottom:30px;
+     }
+
+     .contact-col div{
+         display: flex;
+         align-items: center;
+         margin-bottom: 40px;
+     }
+
+     .contact-col div .fa{
+         font-size: 28px;
+         color:#606c38;
+         margin: 10px;
+         margin-right: 30px;
+     }
+
+     .contact-col div p{
+         padding:0;
+        }
+
+        .contact-col div h5{
+            font-size: 20px;
+            margin-bottom: 5px;
+            color:#573b3b;
+            font-weight: 400;
+        }
+
+    .contact-col input, .contact-col textarea{
+        width:100%;
+        padding: 15px;
+        margin-bottom:17px;
+        outline: none;
+        border: 1px solid #606c38;
+    }
+
+    #contact-pic{
+        background-image: url(Images/contact-ori.jpg);
+    }
+
+   .inline{
+       font-size: 20px;
+       transform: translate(2px,10px);
+      
+   }
+    /*---Shop---*/
+
+    .horizontal{
+        display: grid;
+            grid-template-columns: repeat(3, minmax(14rem,1fr));
+            grid-gap: 30px;
+            padding: 10px;
+  margin:5px;
+
+    }
+
+    .vertical{
+        padding: 20px 0;
+  font-size: 30px;
+  text-align: center;
+  transition: 0.5s;
+  overflow-wrap:break-word;
+        overflow:hidden;
+        background: #f1faee;
+
+    }
+
+   /* .horizontal{
+        display: flex;
+        justify-content: space-between;
+        padding-top:40px;
+        padding-left: 5px;
+    }
+
+    .vertical{
+        flex-basis: 31%;
+        transition: 0.5s;
+        overflow-wrap:break-word;
+        overflow:hidden;
+        padding:40px;
+        margin:10px;
+        border:5px;
+        background: #f1faee;
+    }*/
+
+    .vertical:hover{
+        box-shadow:0 0 20px 0px rgba(0,0,0,0.2) ;
+    }
+    .vertical img{
+        width: 50%;
+        height: auto;
+        transform: translate(40px, 2px);
+    }
+
+    section{
+        padding-top: 40px;
+    }
+
+    #shop-pic{
+        background: url(Images/books-ori.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+          background-size: cover;
+    }
+
+    @media screen and (max-width: 600px){
+        .horizontal{
+            flex-direction: column;
+        }
+    }
+
+     /*---Gallery---*/ 
+
+    /* .gal-horizontal{
+        display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+    }
+    .gal-horizontal .gal-vertical{   
+        transition: 0.5s;
+        overflow-wrap:break-word;
+        overflow:hidden;
+        flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+        }
+    
+  .gal-vertical img{
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  section{
+      padding-top: 0px;
+  }
+  
+  .gal-vertical .img:hover img{
+    transform: scale(1.4) rotate(15deg);
+  }
+
+  @media screen and (max-width: 600px){
+    .gal-horizontal{
+        flex-direction: column;
+    }
+}*/
+
+    
+  /*---News articles---*/ 
+
+  .blog-content{
+      width:80%;
+      margin: auto;
+      padding: 60px 0;
+  }
+
+  .blog-left{
+      flex-basis:65%;
+      transform:translate(80px,2px);
+  }
+
+  .blog-left img{
+      width:100%;
+      padding:20px;
+
+  }
+
+  .blog-left h2{
+      color:#606c38;
+      font-weight:600;
+      margin: 30px 0;
+      padding:10px;
+      
+  }
+
+  .blog-left p{
+      color:black;
+      
+  }
+  
+
+@media screen and (max-width: 600px){
+    .blog-left{
+        transform:translate(-10px,-2px);
+    }
+}
+
+#article-pic{
+    background: url(Images/articles.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+          background-size: cover;
+}
+
+.blog-left blockquote{
+    font-family: Georgia, serif;
+font-size: 18px;
+font-style: italic;
+width: 500px;
+margin: 5px;
+padding: 25px;
+line-height: 1.45;
+position: relative;
+color: #383838;
+}
+
+.blog-left blockquote:before {
+display: block;
+padding-left: 10px;
+content: "\201C";
+font-size: 80px;
+position: absolute;
+left: -20px;
+top: -20px;
+color: #7a7a7a;
+}
+.blog-left blockquote cite {
+color: #999999;
+font-size: 14px;
+display: block;
+margin-top: 5px;
+}
+.blog-left blockquote cite:before {
+content: "\2014 \2009";
+}
+
